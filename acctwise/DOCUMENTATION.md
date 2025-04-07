@@ -1,7 +1,7 @@
 # AcctWise Website Development Documentation
 
 ## Project Overview
-This document outlines the development process and structure for the AcctWise website, a professional landing website for an accounting firm based in Moscavide, Portugal.
+This document outlines the development process and structure for the AcctWise website, a professional landing website for an accounting, maintenance and consultancy firm based in Moscavide, Portugal.
 
 ## Technologies Used
 - **Framework**: Next.js 15
@@ -42,11 +42,18 @@ acctwise/
 - **Text**: #333333 (Dark Gray)
 - **Background**: #FFFFFF (White)
 
+## Main Services Offered
+- **Contabilidade (Accounting)**: Full accounting services for businesses of all sizes
+- **Manutenção (Maintenance)**: Comprehensive maintenance services for systems and equipment
+- **Consultoria (Consultancy)**: Business and financial consultancy services
+- **Fiscalidade (Taxation)**: Tax planning and compliance services
+- **Relatórios Financeiros (Financial Reports)**: Detailed financial reporting and analysis
+
 ## Components Developed
 - [x] Page layout with Header and Footer
 - [x] Hero section for homepage
 - [x] Services section with cards
-- [ ] About section with company info
+- [x] About section with company info
 - [ ] Team section with profiles
 - [ ] Testimonials section
 - [ ] Call-to-action section
@@ -55,13 +62,18 @@ acctwise/
 - [ ] Microsoft Outlook integration
 - [ ] n8n workflow automation
 
-## Pages to Develop
+## Pages Developed
 - [x] Homepage (basic structure)
-- [ ] About page
-- [ ] Services overview page
-- [ ] Individual service pages
+- [x] Services overview page
+- [x] Individual service pages:
+  - [x] Contabilidade (Accounting)
+  - [x] Manutenção (Maintenance)
+  - [x] Consultoria (Consultancy)
+  - [x] Fiscalidade (Taxation)
+  - [x] Relatórios Financeiros (Financial Reports)
+- [ ] About page (in progress)
 - [ ] Team page
-- [ ] Contact page
+- [x] Contact page (basic structure)
 - [ ] Privacy policy page
 
 ## Development Approach
@@ -75,8 +87,17 @@ acctwise/
 8. Testing and quality assurance
 9. Deployment
 
+## Recent Updates
+- Added Maintenance Services throughout the website
+- Updated page metadata to include all three main services (Accounting, Maintenance, and Consultancy)
+- Updated hero section to reflect all services
+- Updated footer with links to all service pages
+- Created dedicated page for Maintenance services (/servicos/manutencao)
+
 ## Next Steps
-1. Create additional homepage sections (About, Team preview, CTA)
-2. Develop inner pages for services, about, and team
-3. Implement contact form with validation
-4. Set up Google Maps integration for contact page
+1. Enhance team page with staff profiles
+2. Implement contact form with validation
+3. Set up Google Maps integration for contact page
+4. Implement testimonials section
+5. Add animations and interactivity
+6. Optimize for SEO and performance

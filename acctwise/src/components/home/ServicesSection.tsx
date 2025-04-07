@@ -25,6 +25,18 @@ export const ServicesSection = () => {
       href: "/servicos/contabilidade",
     },
     {
+      id: "manutencao",
+      title: "Manutenção",
+      description: "Serviços completos de manutenção, garantindo o funcionamento eficiente dos seus sistemas e equipamentos empresariais.",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      ),
+      href: "/servicos/manutencao",
+    },
+    {
       id: "fiscalidade",
       title: "Fiscalidade",
       description: "Consultoria fiscal especializada, ajudando a otimizar a sua carga tributária e cumprir todas as obrigações fiscais.",
@@ -46,48 +58,38 @@ export const ServicesSection = () => {
       ),
       href: "/servicos/consultoria",
     },
-    {
-      id: "relatorios",
-      title: "Relatórios Financeiros",
-      description: "Elaboração de relatórios financeiros detalhados e personalizados para apoiar a tomada de decisões estratégicas.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
-        </svg>
-      ),
-      href: "/servicos/relatorios",
-    },
   ];
 
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-heading font-semibold text-secondary mb-4">
             Os Nossos <span className="text-primary">Serviços</span>
           </h2>
-          <p className="text-gray-600">
-            Fornecemos uma gama completa de serviços de contabilidade e consultoria para responder às necessidades específicas do seu negócio.
+          <p className="text-gray-600 animate-fade-up animate-delay-100">
+            Fornecemos uma gama completa de serviços de contabilidade, consultoria e manutenção para responder às necessidades específicas do seu negócio.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <div 
               key={service.id}
-              className="bg-white border border-gray-100 rounded-lg p-6 shadow-card hover:shadow-lg transition-shadow duration-300"
+              className={`bg-white border border-gray-100 rounded-lg p-6 shadow-card hover-lift transition-all duration-300 animate-fade-up`}
+              style={{ animationDelay: `${(index + 2) * 100}ms` }}
             >
-              <div className="bg-accent w-14 h-14 rounded-full flex items-center justify-center text-primary mb-6">
+              <div className="bg-accent w-14 h-14 rounded-full flex items-center justify-center text-primary mb-6 transition-transform hover:scale-110 duration-300">
                 {service.icon}
               </div>
               <h3 className="text-xl font-semibold text-secondary mb-3">{service.title}</h3>
               <p className="text-gray-600 mb-4">{service.description}</p>
               <Link 
                 href={service.href}
-                className="text-primary font-medium hover:text-primary-dark flex items-center transition-colors"
+                className="text-primary font-medium hover:text-primary-dark flex items-center transition-all group"
               >
                 Saber Mais
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
@@ -95,10 +97,10 @@ export const ServicesSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 animate-fade-up animate-delay-600">
           <Link 
             href="/servicos"
-            className="btn btn-primary px-6 py-3 rounded-md"
+            className="btn btn-primary px-6 py-3 rounded-md hover:scale-105 transition-transform duration-300"
           >
             Ver Todos os Serviços
           </Link>

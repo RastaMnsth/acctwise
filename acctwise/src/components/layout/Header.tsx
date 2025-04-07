@@ -55,7 +55,11 @@ export const Header = () => {
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
-                  pathname === link.href ? "text-primary" : "text-secondary"
+                  pathname === link.href 
+                    ? "text-primary" 
+                    : isScrolled 
+                      ? "text-secondary" 
+                      : "text-white font-semibold"
                 }`}
               >
                 {link.title}
@@ -74,7 +78,7 @@ export const Header = () => {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden p-2 text-secondary"
+            className={`md:hidden p-2 ${isScrolled ? "text-secondary" : "text-white"}`}
             onClick={handleToggleMenu}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"

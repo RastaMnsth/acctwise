@@ -1,10 +1,10 @@
 # AcctWise Website Project
 
-This repository contains the official website for AcctWise - Contabilidade, Consultoria e Manutenção, Lda., an accounting firm in Moscavide, Portugal.
+This repository contains the official website for AcctWise - Contabilidade, Manutenção e Consultoria, Lda., a professional services firm in Moscavide, Portugal.
 
 ## 🏢 Project Overview
 
-- **Client**: AcctWise (AcctWise - Contabilidade, Consultoria e Manutenção, Lda.)
+- **Client**: AcctWise (AcctWise - Contabilidade, Manutenção e Consultoria, Lda.)
 - **Domain**: Acc-Wise.com
 - **Technology Stack**: Next.js 15, TypeScript, React, Tailwind CSS
 - **Language**: European Portuguese
@@ -62,11 +62,17 @@ This repository contains the official website for AcctWise - Contabilidade, Cons
 ## 🔧 Key Features
 
 - Professional design inspired by Nucase.pt with AcctWise branding
-- Contact form with Microsoft Outlook integration
-- n8n workflow automation for form submissions
-- Google Maps integration for office location
-- LinkedIn and Portal das Reclamações integration
-- Full optimization for Portuguese market and language
+- Fully responsive layout with mobile-first approach
+- Comprehensive service pages for all offerings:
+  - Accounting services
+  - Maintenance services
+  - Consultancy services
+  - Taxation services
+  - Financial reporting
+- Contact form with Microsoft Outlook integration (planned)
+- n8n workflow automation for form submissions (planned)
+- Google Maps integration for office location (planned)
+- LinkedIn integration
 
 ## 🌐 Third-Party Integrations
 
@@ -74,7 +80,18 @@ This repository contains the official website for AcctWise - Contabilidade, Cons
 - **Microsoft Graph API**: For email notifications and contact management
 - **n8n**: For workflow automation of form submissions
 - **LinkedIn**: For company profile integration
-- **Portal das Reclamações**: Portuguese consumer complaints portal (required for businesses)
+
+## 📑 Services Offered
+
+- **Contabilidade (Accounting)**: Full accounting services for businesses of all sizes
+- **Manutenção (Maintenance)**: Comprehensive maintenance services for systems and equipment
+- **Consultoria (Consultancy)**: Business and financial consultancy services
+- **Fiscalidade (Taxation)**: Tax planning and compliance services
+- **Relatórios Financeiros (Financial Reports)**: Detailed financial reporting and analysis
+
+## 📅 Last Updated
+
+7 de abril de 2025
 
 ## 👥 Contributors
 

@@ -4,8 +4,8 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AcctWise | Contabilidade, Consultoria e Manutenção",
-  description: "Serviços profissionais de contabilidade e consultoria em Moscavide, Portugal. Soluções personalizadas para empresas e particulares.",
+  title: "AcctWise | Contabilidade, Manutenção e Consultoria",
+  description: "Serviços profissionais de contabilidade, manutenção e consultoria em Moscavide, Portugal. Soluções personalizadas para empresas e particulares.",
 };
 
 export default function RootLayout({
