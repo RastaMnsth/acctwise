@@ -1,0 +1,10 @@
+# Allow all web crawlers to access all content
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.acc-wise.com/sitemap.xml
+
+# Disallow access to admin paths (if implemented in the future)
+User-agent: *
+Disallow: /admin/
