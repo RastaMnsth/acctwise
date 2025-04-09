@@ -1,15 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #333333;
-  --primary: #0F5132;
-  --primary-light: #1B8B5A;
-  --primary-dark: #0A3C24;
-  --secondary: #121212;
-  --accent: #E8F5E9;
-  --accent-light: #F6FBF6;
-  --accent-dark: #C8E6C9;
+  --background: #FFFFFF;
+  --foreground: #3A4F41;
+  --primary: #4E9F3D;
+  --primary-light: #8FBF60;
+  --primary-dark: #357A2D;
+  --secondary: #3B7080;
+  --secondary-light: #4F99AD;
+  --secondary-dark: #2A5561;
+  --accent: #F0F7EE;
+  --accent-light: #F9FDF7;
+  --accent-dark: #D6E9D3;
+  --text: #3A4F41;
+  --text-light: #6E8573;
+  --text-lighter: #A5BBA9;
 }
 
 @theme inline {
@@ -19,17 +24,23 @@
   --color-primary-light: var(--primary-light);
   --color-primary-dark: var(--primary-dark);
   --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
+  --color-secondary-dark: var(--secondary-dark);
   --color-accent: var(--accent);
   --color-accent-light: var(--accent-light);
   --color-accent-dark: var(--accent-dark);
+  --color-text: var(--text);
+  --color-text-light: var(--text-light);
+  --color-text-lighter: var(--text-lighter);
   --font-sans: var(--font-inter);
   --font-heading: var(--font-playfair);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1C2B21;
+    --foreground: #F0F7EE;
+    --secondary: #4F99AD;
   }
 }
 
@@ -52,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   border-radius: 0.375rem;
   font-weight: 500;
-  transition-property: color, background-color, border-color;
+  transition-property: color, background-color, border-color, transform, box-shadow;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -60,13 +71,26 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary {
   background-color: var(--primary);
   color: white;
-  box-shadow: 0 2px 10px rgba(15, 81, 50, 0.15);
+  box-shadow: 0 2px 10px rgba(78, 159, 61, 0.15);
 }
 
 .btn-primary:hover {
   background-color: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(15, 81, 50, 0.2);
+  box-shadow: 0 4px 12px rgba(78, 159, 61, 0.2);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  box-shadow: 0 2px 10px rgba(78, 159, 61, 0.1);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(78, 159, 61, 0.15);
 }
 
 /* Utility classes for margins and padding */

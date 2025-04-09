@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { inter, playfair } from "@/lib/fonts";
+import { sfPro, playfair } from "@/lib/fonts";
 import { MainLayout } from "@/components/layout/MainLayout";
 import "./globals.css";
 
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body
-        className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
+        className={`${sfPro.variable} ${playfair.variable} font-sans antialiased`}
       >
         <MainLayout>
           {children}

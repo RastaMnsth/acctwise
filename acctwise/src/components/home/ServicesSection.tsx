@@ -1,5 +1,12 @@
 "use client";
 import Link from "next/link";
+import { 
+  CalculatorIcon, 
+  WrenchScrewdriverIcon, 
+  DocumentTextIcon, 
+  ChartBarIcon, 
+  BuildingLibraryIcon 
+} from "@heroicons/react/24/outline";
 
 // Define service types
 type Service = {
@@ -11,98 +18,115 @@ type Service = {
 };
 
 export const ServicesSection = () => {
-  // Services data with SVG icons
+  // Services data with modern Heroicons v2
   const services: Service[] = [
     {
       id: "contabilidade",
       title: "Contabilidade",
       description: "Serviços de contabilidade completos e personalizados para empresas de todos os tamanhos e setores.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
+      icon: <CalculatorIcon className="w-6 h-6" />,
       href: "/servicos/contabilidade",
     },
     {
       id: "manutencao",
       title: "Manutenção",
       description: "Serviços completos de manutenção, garantindo o funcionamento eficiente dos seus sistemas e equipamentos empresariais.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-      ),
+      icon: <WrenchScrewdriverIcon className="w-6 h-6" />,
       href: "/servicos/manutencao",
     },
     {
       id: "fiscalidade",
       title: "Fiscalidade",
       description: "Consultoria fiscal especializada, ajudando a otimizar a sua carga tributária e cumprir todas as obrigações fiscais.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-        </svg>
-      ),
+      icon: <DocumentTextIcon className="w-6 h-6" />,
       href: "/servicos/fiscalidade",
     },
     {
       id: "consultoria",
       title: "Consultoria Empresarial",
       description: "Assessoria estratégica para decisões financeiras, processos de negócio e planeamento do crescimento da sua empresa.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
+      icon: <BuildingLibraryIcon className="w-6 h-6" />,
       href: "/servicos/consultoria",
+    },
+    {
+      id: "relatorios",
+      title: "Relatórios Financeiros",
+      description: "Relatórios detalhados e análises financeiras que ajudam a tomar decisões informadas para o crescimento do seu negócio.",
+      icon: <ChartBarIcon className="w-6 h-6" />,
+      href: "/servicos/relatorios",
     },
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
-          <h2 className="text-3xl md:text-4xl font-heading font-semibold text-secondary mb-4">
-            Os Nossos <span className="text-primary">Serviços</span>
+    <section className="py-20 md:py-28 bg-gradient-to-b from-white to-accent-light/50 relative">
+      {/* Background decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-[10%] w-72 h-72 bg-primary/5 rounded-full mix-blend-multiply blur-xl opacity-70"></div>
+        <div className="absolute bottom-20 right-[10%] w-96 h-96 bg-primary/5 rounded-full mix-blend-multiply blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4 animate-fade-up">Os Nossos Serviços</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-secondary mb-4 animate-fade-up animate-delay-100">
+            Soluções Especializadas Para o Seu Negócio
           </h2>
-          <p className="text-gray-600 animate-fade-up animate-delay-100">
-            Fornecemos uma gama completa de serviços de contabilidade, consultoria e manutenção para responder às necessidades específicas do seu negócio.
+          <p className="text-text text-lg animate-fade-up animate-delay-200">
+            Na AcctWise oferecemos uma gama completa de serviços financeiros e de consultoria para impulsionar o crescimento da sua empresa.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div 
+            <div
               key={service.id}
-              className={`bg-white border border-gray-100 rounded-lg p-6 shadow-card hover-lift transition-all duration-300 animate-fade-up`}
+              className="group relative bg-white/90 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 animate-fade-up"
               style={{ animationDelay: `${(index + 2) * 100}ms` }}
             >
-              <div className="bg-accent w-14 h-14 rounded-full flex items-center justify-center text-primary mb-6 transition-transform hover:scale-110 duration-300">
-                {service.icon}
+              {/* Card inner elements */}
+              <div className="p-8">
+                <div className="relative mb-6">
+                  {/* Decorative circle behind icon */}
+                  <div className="absolute -top-4 -left-4 w-16 h-16 bg-primary/10 rounded-full opacity-70 group-hover:scale-110 transition-transform duration-500"></div>
+                  
+                  {/* Icon with animated border */}
+                  <div className="relative z-10 w-14 h-14 flex items-center justify-center bg-white text-primary rounded-xl border-2 border-accent group-hover:border-primary transition-colors duration-300">
+                    {service.icon}
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-semibold text-secondary mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
+                <p className="text-text mb-6">{service.description}</p>
+                
+                <Link 
+                  href={service.href}
+                  className="inline-flex items-center text-primary font-medium group-hover:text-primary-dark transition-colors"
+                >
+                  <span className="mr-2 relative">
+                    Saber Mais
+                    <span className="absolute left-0 bottom-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                  </span>
+                  <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
-              <h3 className="text-xl font-semibold text-secondary mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
-              <Link 
-                href={service.href}
-                className="text-primary font-medium hover:text-primary-dark flex items-center transition-all group"
-              >
-                Saber Mais
-                <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+              
+              {/* Bottom gradient accent */}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12 animate-fade-up animate-delay-600">
+        <div className="text-center mt-16 animate-fade-up animate-delay-600">
           <Link 
             href="/servicos"
-            className="btn btn-primary px-6 py-3 rounded-md hover:scale-105 transition-transform duration-300"
+            className="inline-flex items-center justify-center bg-white/80 backdrop-blur-sm border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-lg px-8 py-4 font-medium shadow-md hover:shadow-lg transition-all duration-300 group"
           >
-            Ver Todos os Serviços
+            <span>Ver Todos os Serviços</span>
+            <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
           </Link>
         </div>
       </div>

@@ -6,7 +6,7 @@ This repository contains the official website for AcctWise - Contabilidade, Manu
 
 - **Client**: AcctWise (AcctWise - Contabilidade, Manutenção e Consultoria, Lda.)
 - **Domain**: Acc-Wise.com
-- **Technology Stack**: Next.js 15, TypeScript, React, Tailwind CSS
+- **Technology Stack**: Next.js 15, TypeScript, React 19, Tailwind CSS 4
 - **Language**: European Portuguese
 
 ## 🎨 Brand Colors
@@ -69,16 +69,20 @@ This repository contains the official website for AcctWise - Contabilidade, Manu
   - Consultancy services
   - Taxation services
   - Financial reporting
+- Robust contact form with validation and feedback
+- Google Maps integration for office location
+- Testimonials carousel showcasing client feedback
+- Comprehensive GDPR-compliant privacy policy
+- Team members section with profiles
 - Contact form with Microsoft Outlook integration (planned)
 - n8n workflow automation for form submissions (planned)
-- Google Maps integration for office location (planned)
 - LinkedIn integration
 
 ## 🌐 Third-Party Integrations
 
 - **Google Maps API**: For office location display
-- **Microsoft Graph API**: For email notifications and contact management
-- **n8n**: For workflow automation of form submissions
+- **Microsoft Graph API**: For email notifications and contact management (planned)
+- **n8n**: For workflow automation of form submissions (planned)
 - **LinkedIn**: For company profile integration
 
 ## 📑 Services Offered
@@ -89,9 +93,20 @@ This repository contains the official website for AcctWise - Contabilidade, Manu
 - **Fiscalidade (Taxation)**: Tax planning and compliance services
 - **Relatórios Financeiros (Financial Reports)**: Detailed financial reporting and analysis
 
+## 🛠️ Recent Updates
+
+- Updated dependencies to latest versions: Next.js 15.2.4, React 19, Tailwind CSS 4
+- Enhanced footer design with improved social media integration
+- Optimized responsive design for all screen sizes
+- Added testimonials carousel with client feedback
+- Implemented contact form with full validation
+- Added Google Maps integration for office location
+- Created comprehensive privacy policy page
+- Added team member profiles
+
 ## 📅 Last Updated
 
-7 de abril de 2025
+8 de abril de 2025
 
 ## 👥 Contributors
 

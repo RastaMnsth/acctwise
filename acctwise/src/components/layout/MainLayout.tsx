@@ -2,6 +2,7 @@
 import { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import PageTransition from "./PageTransition";
 
 type LayoutProps = {
   children: ReactNode;
@@ -18,7 +19,9 @@ export const MainLayout = ({ children }: LayoutProps) => {
       </a>
       <Header />
       <main id="main-content" className="min-h-screen pt-16">
-        {children}
+        <PageTransition>
+          {children}
+        </PageTransition>
       </main>
       <Footer />
     </>

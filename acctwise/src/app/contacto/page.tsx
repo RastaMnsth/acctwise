@@ -1,11 +1,10 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import ContactForm from '@/components/contact/ContactForm';
+import GoogleMap from '@/components/contact/GoogleMap';
+import { generateSeoMetadata, pageSeoConfigs } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Contacto | AcctWise',
-  description: 'Entre em contacto com a AcctWise para serviços de contabilidade, fiscalidade e consultoria em Moscavide, Portugal.',
-};
+export const metadata: Metadata = generateSeoMetadata(pageSeoConfigs.contact, 'contacto');
 
 export default function ContactoPage() {
   return (
@@ -16,7 +15,7 @@ export default function ContactoPage() {
             Contacte-<span className="text-primary">nos</span>
           </h1>
           <p className="text-center text-gray-700 max-w-3xl mx-auto animate-fade-up animate-delay-100">
-            Estamos aqui para responder às suas questões e ajudar com os seus desafios contabilísticos e fiscais.
+            Estamos aqui para responder às suas questões e ajudar com os seus desafios contabilísticos, de manutenção e consultoria.
           </p>
         </div>
       </section>
@@ -26,116 +25,7 @@ export default function ContactoPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Form */}
             <div className="lg:col-span-2 animate-fade-right">
-              <div className="bg-white rounded-lg shadow-lg p-8 hover-lift">
-                <h2 className="text-2xl font-semibold mb-6 text-secondary">Envie-nos uma Mensagem</h2>
-                
-                <form>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div className="animate-fade-up animate-delay-100">
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Nome Completo *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      />
-                    </div>
-                    
-                    <div className="animate-fade-up animate-delay-200">
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      />
-                    </div>
-                    
-                    <div className="animate-fade-up animate-delay-300">
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                        Telefone
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      />
-                    </div>
-                    
-                    <div className="animate-fade-up animate-delay-400">
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                        Empresa
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      />
-                    </div>
-                    
-                    <div className="md:col-span-2 animate-fade-up animate-delay-500">
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                        Assunto *
-                      </label>
-                      <input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      />
-                    </div>
-                    
-                    <div className="md:col-span-2 animate-fade-up animate-delay-600">
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                        Mensagem *
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        rows={6}
-                        required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      ></textarea>
-                    </div>
-                  </div>
-                  
-                  {/* Privacy Policy Checkbox */}
-                  <div className="mb-6 animate-fade-up animate-delay-700">
-                    <div className="flex items-start">
-                      <div className="flex items-center h-5">
-                        <input
-                          id="privacy"
-                          name="privacy"
-                          type="checkbox"
-                          required
-                          className="focus:ring-primary h-4 w-4 text-primary border-gray-300 rounded"
-                        />
-                      </div>
-                      <div className="ml-3 text-sm">
-                        <label htmlFor="privacy" className="text-gray-700">
-                          Li e aceito a <Link href="/privacidade" className="text-primary hover:underline">Política de Privacidade</Link> *
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    className="px-6 py-3 bg-primary text-white rounded-md font-medium shadow-button hover:bg-primary-dark transition-all hover:scale-105 animate-fade-up animate-delay-800"
-                  >
-                    Enviar Mensagem
-                  </button>
-                </form>
-              </div>
+              <ContactForm />
             </div>
             
             {/* Contact Information */}
@@ -150,9 +40,9 @@ export default function ContactoPage() {
                     </div>
                     <div>
                       <h3 className="font-medium text-secondary">O Nosso Escritório</h3>
-                      <p className="text-gray-600">Rua Example, 123</p>
-                      <p className="text-gray-600">2670-000 Moscavide</p>
-                      <p className="text-gray-600">Portugal</p>
+                      <p className="text-gray-600">Avenida de Moscavide, 29A</p>
+                      <p className="text-gray-600">1885-062 Moscavide</p>
+                      <p className="text-gray-600">Lisboa, Portugal</p>
                     </div>
                   </div>
                   
@@ -162,7 +52,7 @@ export default function ContactoPage() {
                     </div>
                     <div>
                       <h3 className="font-medium text-secondary">Telefone</h3>
-                      <p className="text-gray-600">+351 210 000 000</p>
+                      <p className="text-gray-600">+351 211 123 456</p>
                     </div>
                   </div>
                   
@@ -172,7 +62,7 @@ export default function ContactoPage() {
                     </div>
                     <div>
                       <h3 className="font-medium text-secondary">Email</h3>
-                      <p className="text-gray-600">info@acc-wise.com</p>
+                      <p className="text-gray-600">contacto@acc-wise.com</p>
                     </div>
                   </div>
                   
@@ -213,9 +103,7 @@ export default function ContactoPage() {
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-heading font-semibold text-center mb-8 animate-fade-up">Encontre-nos em Moscavide</h2>
-          <div className="w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center animate-fade-up animate-delay-100 hover-lift">
-            <p className="text-gray-500 italic">Mapa do Google será carregado aqui</p>
-          </div>
+          <GoogleMap />
         </div>
       </section>
     </main>

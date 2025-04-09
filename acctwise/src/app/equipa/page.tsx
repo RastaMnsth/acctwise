@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
+import CTASection from '@/components/shared/CTASection';
 
 export const metadata: Metadata = {
   title: 'A Nossa Equipa | AcctWise',
@@ -206,24 +205,13 @@ export default function EquipaPage() {
         </div>
       </section>
       
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-heading font-semibold mb-6 text-secondary">
-              Junte-se à Nossa Equipa
-            </h2>
-            <p className="text-gray-700 mb-8">
-              Estamos sempre à procura de talentos apaixonados por contabilidade e finanças para se juntarem à nossa equipa. Se está interessado em trabalhar connosco, entre em contacto.
-            </p>
-            <Link 
-              href="/contacto" 
-              className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-button transition-colors"
-            >
-              Contacte-nos
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTASection 
+        title="Junte-se à Nossa Equipa"
+        subtitle="Estamos sempre à procura de talentos apaixonados por contabilidade e finanças para se juntarem à nossa equipa. Se está interessado em trabalhar connosco, entre em contacto."
+        buttonText="Contacte-nos"
+        buttonLink="/contacto"
+        variant="secondary"
+      />
     </main>
   );
 }

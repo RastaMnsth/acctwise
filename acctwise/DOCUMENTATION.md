@@ -9,14 +9,16 @@ This document outlines the development process and structure for the AcctWise we
 - **Styling**: Tailwind CSS
 - **Content**: European Portuguese language
 - **Integrations**: 
-  - Google Maps API (planned)
+  - Google Maps API (implemented)
   - Microsoft Outlook integration (planned)
   - n8n workflow automation (planned)
+  - LinkedIn company profile (implemented)
 
 ## Project Structure
 ```
 acctwise/
 ├── public/            # Static assets, images, and icons
+│   └── testimonials/  # Client testimonial photos
 ├── src/
 │   ├── app/           # Next.js app router pages
 │   ├── components/    # Organized by section/feature
@@ -54,16 +56,17 @@ acctwise/
 - [x] Hero section for homepage
 - [x] Services section with cards
 - [x] About section with company info
-- [ ] Team section with profiles
-- [ ] Testimonials section
-- [ ] Call-to-action section
-- [ ] Contact form with validation
-- [ ] Google Maps integration
+- [x] Team section with profiles
+- [x] Testimonials section
+- [x] Call-to-action section
+- [x] Contact form with validation
+- [x] Google Maps integration
 - [ ] Microsoft Outlook integration
 - [ ] n8n workflow automation
+- [x] LinkedIn company profile integration
 
 ## Pages Developed
-- [x] Homepage (basic structure)
+- [x] Homepage (including testimonials and CTA)
 - [x] Services overview page
 - [x] Individual service pages:
   - [x] Contabilidade (Accounting)
@@ -72,9 +75,9 @@ acctwise/
   - [x] Fiscalidade (Taxation)
   - [x] Relatórios Financeiros (Financial Reports)
 - [ ] About page (in progress)
-- [ ] Team page
-- [x] Contact page (basic structure)
-- [ ] Privacy policy page
+- [x] Team page
+- [x] Contact page (fully functional)
+- [x] Privacy policy page
 
 ## Development Approach
 1. Set up project structure and configuration
@@ -87,17 +90,52 @@ acctwise/
 8. Testing and quality assurance
 9. Deployment
 
-## Recent Updates
-- Added Maintenance Services throughout the website
-- Updated page metadata to include all three main services (Accounting, Maintenance, and Consultancy)
-- Updated hero section to reflect all services
-- Updated footer with links to all service pages
-- Created dedicated page for Maintenance services (/servicos/manutencao)
+## Recent Updates (As of 8 de abril de 2025)
+- Created reusable Call-to-Action (CTA) component with primary/secondary variants
+- Added CTAs to homepage and services page
+- Implemented testimonials section with carousel component
+- Implemented contact form with complete validation
+- Added Google Maps integration for office location
+- Created form submission handler with mock functionality (preparing for MS Outlook integration)
+- Finalized team page structure
+- Implemented LinkedIn integration
+- Created GDPR-compliant privacy policy page
 
-## Next Steps
-1. Enhance team page with staff profiles
-2. Implement contact form with validation
-3. Set up Google Maps integration for contact page
-4. Implement testimonials section
-5. Add animations and interactivity
-6. Optimize for SEO and performance
+## Completed Sprint Tasks (8 de abril de 2025)
+1. ✅ Implement contact form with validation
+2. ✅ Begin Google Maps integration for contact page
+3. ✅ Start development of testimonials section
+4. ✅ Create privacy policy page for GDPR compliance
+5. ⏳ Add actual images for team members
+6. ✅ Create Call-to-Action component
+
+## Current Sprint Focus (15 de abril de 2025)
+1. Replace placeholder testimonial and team images with actual photos
+2. Set up Microsoft Outlook integration for email notifications
+3. Implement n8n workflow automation for form submissions
+4. Add Call-to-Action sections to individual service pages
+5. Finalize About page
+6. Implement page load animations and transitions
+
+## Next Steps - Priority Order
+1. Replace placeholder Google Maps coordinates with actual office location
+2. Add actual testimonial client photos and team member images
+3. Set up Microsoft Outlook integration for email notifications
+4. Implement n8n workflow automation for form submissions
+5. Finalize About page content and design
+6. Add animations for page transitions and component loading
+7. Optimize for SEO and performance
+   - Add meta tags to all pages
+   - Implement Open Graph protocol for social sharing
+   - Optimize image loading and Core Web Vitals
+8. Conduct cross-browser compatibility testing
+9. Perform responsive design testing on multiple devices
+10. Address any accessibility issues (WCAG compliance)
+11. Final review and deployment preparation
+
+## GitHub Workflow
+1. Create feature branches for each major task
+2. Commit changes with descriptive commit messages
+3. Create pull requests for code review
+4. Merge approved changes to main branch
+5. Tag releases with version numbers

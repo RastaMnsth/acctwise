@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import CTASection from '@/components/shared/CTASection';
 
 export const metadata: Metadata = {
   title: 'Serviços de Fiscalidade | AcctWise',
@@ -125,24 +126,13 @@ export default function FiscalidadePage() {
         </div>
       </section>
       
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-heading font-semibold mb-6 text-secondary">
-              Precisa de Ajuda com a Sua Fiscalidade?
-            </h2>
-            <p className="text-gray-700 mb-8">
-              Fale com os nossos especialistas em fiscalidade hoje e descubra como podemos ajudá-lo a otimizar a sua situação fiscal de forma legal e eficiente.
-            </p>
-            <Link 
-              href="/contacto" 
-              className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-button transition-colors"
-            >
-              Agende uma Consulta Fiscal
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTASection 
+        title="Precisa de Ajuda com a Sua Fiscalidade?"
+        subtitle="Fale com os nossos especialistas em fiscalidade hoje e descubra como podemos ajudá-lo a otimizar a sua situação fiscal de forma legal e eficiente."
+        buttonText="Agende uma Consulta Fiscal"
+        buttonLink="/contacto"
+        variant="primary"
+      />
     </main>
   );
 }

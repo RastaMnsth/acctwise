@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import CTASection from '@/components/shared/CTASection';
 
 export const metadata: Metadata = {
   title: 'Relatórios Financeiros | AcctWise',
@@ -126,24 +127,13 @@ export default function RelatoriosPage() {
         </div>
       </section>
       
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-heading font-semibold mb-6 text-secondary">
-              Pronto para Obter Mais Insights Financeiros?
-            </h2>
-            <p className="text-gray-700 mb-8">
-              Entre em contacto connosco hoje para descobrir como os nossos serviços de relatórios financeiros podem ajudar o seu negócio a prosperar.
-            </p>
-            <Link 
-              href="/contacto" 
-              className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-button transition-colors"
-            >
-              Contacte-nos Hoje
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTASection 
+        title="Pronto para Obter Mais Insights Financeiros?"
+        subtitle="Entre em contacto connosco hoje para descobrir como os nossos serviços de relatórios financeiros podem ajudar o seu negócio a prosperar."
+        buttonText="Contacte-nos Hoje"
+        buttonLink="/contacto"
+        variant="secondary"
+      />
     </main>
   );
 }

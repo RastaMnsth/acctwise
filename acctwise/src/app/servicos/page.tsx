@@ -1,10 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import CTASection from '@/components/shared/CTASection';
+import { generateSeoMetadata, pageSeoConfigs } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Serviços | AcctWise',
-  description: 'Conheça os nossos serviços de contabilidade, fiscalidade, consultoria, manutenção e relatórios financeiros em Moscavide, Portugal.',
-};
+export const metadata: Metadata = generateSeoMetadata(pageSeoConfigs.services, 'servicos');
 
 export default function ServicosPage() {
   return (
@@ -68,7 +67,7 @@ export default function ServicosPage() {
             <div className="bg-white p-8 rounded-lg shadow-card hover-lift transition-all duration-300 animate-fade-up animate-delay-400">
               <div className="text-primary mb-4 transition-transform hover:scale-110">
                 <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5A1 1 0 116 8a1 1 0 102 0V7a1 1 0 00-1-1zm0 2a1 1 0 100 2 1 1 0 000-2zm-2 4a1 1 0 110-2 1 1 0 010 2zm6-2a1 1 0 100 2 1 1 1 000-2zm-3 2a1 1 0 110-2 1 1 0 010 2zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-4 text-secondary">Consultoria</h3>
@@ -94,7 +93,7 @@ export default function ServicosPage() {
               </div>
               <h3 className="text-xl font-semibold mb-4 text-secondary">Manutenção</h3>
               <p className="text-gray-700 mb-6">
-                Serviços completos de manutenção preventiva e corretiva para garantir o funcionamento eficiente dos seus sistemas e equipamentos.
+                Serviços completos de manutenção preventiva e corretiva para garantir o funcionamento eficiente dos seus equipamentos.
               </p>
               <Link 
                 href="/servicos/manutencao" 
@@ -131,24 +130,13 @@ export default function ServicosPage() {
         </div>
       </section>
       
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-heading font-semibold mb-6 text-secondary animate-fade-up">
-              Precisa de Ajuda com o seu Negócio?
-            </h2>
-            <p className="text-gray-700 mb-8 animate-fade-up animate-delay-100">
-              Entre em contacto connosco hoje para uma consulta inicial gratuita. Estamos prontos para ajudar a sua empresa a atingir todo o seu potencial.
-            </p>
-            <Link 
-              href="/contacto" 
-              className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-button transition-all hover:scale-105 animate-fade-up animate-delay-200"
-            >
-              Contacte-nos Hoje
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTASection 
+        title="Precisa de Ajuda com o seu Negócio?"
+        subtitle="Entre em contacto connosco hoje para uma consulta gratuita. Estamos prontos para ajudar o seu negócio a prosperar."
+        buttonText="Contacte-nos Hoje"
+        buttonLink="/contacto"
+        variant="primary"
+      />
     </main>
   );
 }

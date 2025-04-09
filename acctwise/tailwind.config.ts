@@ -10,17 +10,29 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#0F5132",
-          light: "#1B8B5A",
-          dark: "#0A3C24",
+          DEFAULT: "#4E9F3D", // Fresh green
+          light: "#8FBF60",   // Light fresh green
+          dark: "#357A2D",    // Darker fresh green
         },
-        secondary: "#121212",
+        secondary: {
+          DEFAULT: "#3B7080", // Teal blue
+          dark: "#2A5561",    // Dark teal
+          light: "#4F99AD",   // Light teal
+        },
         accent: {
-          DEFAULT: "#E8F5E9",
-          light: "#F6FBF6",
-          dark: "#C8E6C9",
+          DEFAULT: "#F0F7EE", // Soft mint/cream
+          light: "#F9FDF7",   // Almost white with green tint
+          dark: "#D6E9D3",    // Light mint
         },
-        text: "#333333",
+        text: {
+          DEFAULT: "#3A4F41", // Forest green text
+          light: "#6E8573",   // Medium green-gray
+          lighter: "#A5BBA9", // Light green-gray
+        },
+        background: {
+          DEFAULT: "#FFFFFF",
+          alt: "#F7FBF9",     // Very light green tinted background
+        },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
@@ -35,8 +47,14 @@ const config: Config = {
         small: ["0.875rem", { lineHeight: "1.5" }],
       },
       boxShadow: {
-        card: "0 4px 20px rgba(0, 0, 0, 0.08)",
-        button: "0 2px 10px rgba(15, 81, 50, 0.15)",
+        card: "0 4px 20px rgba(78, 159, 61, 0.08)",
+        button: "0 2px 10px rgba(78, 159, 61, 0.15)",
+        elevated: "0 10px 30px rgba(78, 159, 61, 0.12)",
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'grid-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234E9F3D' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
       },
     },
   },
